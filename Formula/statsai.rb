@@ -1,15 +1,15 @@
 class Statsai < Formula
   desc "Local-first AI usage statistics CLI for macOS."
   homepage "https://statsai.dev"
-  version "0.1.1"
+  version "0.2.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/starkdmi/statsai/releases/download/v0.1.1/statsai-aarch64-apple-darwin.tar.xz"
-      sha256 "8e88168b9cf96354e1cc2769f512ac0baaa2aa6e904187a6ad5906c936803206"
+      url "https://github.com/starkdmi/statsai/releases/download/v0.2.0/statsai-aarch64-apple-darwin.tar.xz"
+      sha256 "8bc1f915ce541dfaeaf87228a451fd2e233dc90a6707a7be278a319b94d3442a"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/starkdmi/statsai/releases/download/v0.1.1/statsai-x86_64-apple-darwin.tar.xz"
-      sha256 "c91d4202266124a9380f8854259ed6b2c98547cb37837561c3aa22ae096dadd9"
+      url "https://github.com/starkdmi/statsai/releases/download/v0.2.0/statsai-x86_64-apple-darwin.tar.xz"
+      sha256 "cb24ce15cc88b324fd7c9558907c8a6eee3ac9f416cd733c49b6795e03269590"
     end
   end
   license "Apache-2.0"
