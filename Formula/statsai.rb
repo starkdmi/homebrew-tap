@@ -1,15 +1,15 @@
 class Statsai < Formula
   desc "Local-first AI usage statistics CLI for macOS."
   homepage "https://statsai.dev"
-  version "0.3.3"
+  version "0.4.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/starkdmi/statsai/releases/download/v0.3.3/statsai-aarch64-apple-darwin.tar.xz"
-      sha256 "a33ba1421d0db05e62eecac19ba471bd03325cd82c22ed25710dc7cf25131870"
+      url "https://github.com/starkdmi/statsai/releases/download/v0.4.0/statsai-aarch64-apple-darwin.tar.xz"
+      sha256 "faca7eaa7fd180dc77f2dead1c303302c7f20ef9dbb7ff6a7db660b339bc98b4"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/starkdmi/statsai/releases/download/v0.3.3/statsai-x86_64-apple-darwin.tar.xz"
-      sha256 "667be3050b1fcd74ad0e3abc8dca14f4a76310123b35089b801ddf7ae63b35a0"
+      url "https://github.com/starkdmi/statsai/releases/download/v0.4.0/statsai-x86_64-apple-darwin.tar.xz"
+      sha256 "6ef7e402083f57ba1dda3a4114d19d78e89ece878cca8a0cbd6a3c5071d0a693"
     end
   end
   license "Apache-2.0"
@@ -35,8 +35,12 @@ class Statsai < Formula
   end
 
   def install
-    bin.install "statsai" if OS.mac? && Hardware::CPU.arm?
-    bin.install "statsai" if OS.mac? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "statsai"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "statsai"
+    end
 
     install_binary_aliases!
 
