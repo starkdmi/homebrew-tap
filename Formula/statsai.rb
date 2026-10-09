@@ -1,23 +1,23 @@
 class Statsai < Formula
   desc "Local-first AI usage statistics CLI for macOS."
   homepage "https://statsai.dev"
-  version "0.5.0"
+  version "0.6.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/starkdmi/statsai/releases/download/v0.5.0/statsai-aarch64-apple-darwin.tar.xz"
-      sha256 "469538fe4e3d97cc96c28fd52012c76f49f924deb551531ba3d9e387a80810b1"
+      url "https://github.com/starkdmi/statsai/releases/download/v0.6.0/statsai-aarch64-apple-darwin.tar.xz"
+      sha256 "d2dcc0a3db91202b4e3700a42ce942c8754f0216c1cbc5ba30ed792a20e82e19"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/starkdmi/statsai/releases/download/v0.5.0/statsai-x86_64-apple-darwin.tar.xz"
-      sha256 "1c97b2a63372363aab497a3fe4e66887e878a5e8b60f668ce34bca93e5077563"
+      url "https://github.com/starkdmi/statsai/releases/download/v0.6.0/statsai-x86_64-apple-darwin.tar.xz"
+      sha256 "f86be672ba3664746c1950d204dec0a51803330bc12362c0fca7c8f73e58df2d"
     end
   end
   license "Apache-2.0"
 
   BINARY_ALIASES = {
     "aarch64-apple-darwin": {},
-    "x86_64-apple-darwin":  {},
-  }.freeze
+    "x86_64-apple-darwin": {}
+  }
 
   def target_triple
     cpu = Hardware::CPU.arm? ? "aarch64" : "x86_64"
