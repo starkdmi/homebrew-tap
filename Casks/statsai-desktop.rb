@@ -26,4 +26,12 @@ cask "statsai-desktop" do
     "~/Library/Saved Application State/dev.statsai.desktop.savedState",
     "~/Library/WebKit/dev.statsai.desktop",
   ]
+
+  caveats <<~EOS
+    The StatsAI CLI's menu bar app was named StatsAI.app before CLI v0.7.3,
+    and installing this cask fails while that app is in /Applications. Update
+    the menu bar app to v0.7.3 or later, which is named StatsAIMenuBar.app,
+    and open it once: it moves the old StatsAI.app to the Trash and moves its
+    login item. Or quit the old menu bar app and move it out of /Applications.
+  EOS
 end
