@@ -1,6 +1,6 @@
 cask "statsai-desktop" do
-  version "0.1.2"
-  sha256 "a36c2659002087bf88faf92ca77750d1bcbb967a2ef1d7275e5bb0a6cabf444a"
+  version "0.1.3"
+  sha256 "2e93cfc224b2f5c80e3a3e0197c43b2e283b2bbf9a2514eee3e17f80990e92b2"
 
   url "https://github.com/StatsAIDev/statsai-desktop/releases/download/desktop-v#{version}/StatsAI_#{version}_universal.dmg"
   name "StatsAI"
